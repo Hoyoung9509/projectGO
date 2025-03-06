@@ -1,9 +1,9 @@
 package test;
 
-public class test {
-
-    public void vo(){
+public class test1 {
 
 
-    };
+
 }
+
+

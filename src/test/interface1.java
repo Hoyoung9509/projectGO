@@ -1,4 +1,5 @@
 package test;
 
-public class interface1 {
+public interface interface1 {
+    public void inf();
 }
