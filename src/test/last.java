@@ -6,7 +6,7 @@ public class last {
 
     public static void main(String[] args) {
 
-        int[] arr = {5, 15, 17, 22, 4, 7, 42, 1};
+        int[] arr = {5, 15, 17, 22, 4, 7, 42};
 
         System.out.println(Arrays.toString(arr));
 
