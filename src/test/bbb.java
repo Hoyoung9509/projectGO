@@ -4,47 +4,32 @@ import java.util.*;
 
 public class bbb {
     public static void main(String[] args) {
-        int[] arr = {5, 32, 3, 34, 7, 25};
+        int[][] score = {
+                {100,100,100},
+                {20,20,20},
+                {30,30,30},
+                {40,40,40},
+                {50,50,50}
+        };
 
-        System.out.println(Arrays.toString(arr));
+        int[][] result = new int [score.length +1][score[0].length+1];
 
-        sort(arr, 0, arr.length -1);
+        for (int i = 0; i < score.length; i++){
+            for (int j = 0; j < score[i].length; j ++){
+                int sum = 0;
+                sum += score[i][j];
+                result[i][3] = sum;
 
-        System.out.println(Arrays.toString(arr));
 
+            }
 
-    }
-
-    public static void sort (int[] arr,int low,int high){
-        if (low < high) {
-            int pivotindex = part(arr, low, high);
-
-            sort(arr, low, pivotindex -1);
-            sort(arr, pivotindex+1, high);
         }
-    }
 
-    public static int part(int[] arr, int low, int high){
-        int mid = low + (high-low)/2;
-
-        swap(arr, low, mid);
-        int pivot = arr[low];
-       int i = low;
-
-       for (int j = low+1; j <= high; j++){
-           if (pivot >= arr[j]){
-               i++;
-               swap(arr, i, j);
-           }
-       }
-       swap(arr, low, i);
-       return  i;
-
-    }
-
-    public static void swap(int[] arr, int x, int y){
-        int temp = arr[x];
-        arr[x] = arr[y];
-        arr[y] = temp;
+        for (int i = 0; i < result.length; i ++){
+            for (int j = 0; j < result[i].length; j ++){
+                System.out.printf("%4d", result[i][j]);
+            }
+            System.out.println();
+        }
     }
 }
